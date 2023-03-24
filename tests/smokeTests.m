@@ -69,30 +69,32 @@ classdef smokeTests < matlab.unittest.TestCase
             StatePlots
         end
 
-        % function runModelFridge(testCase)
-        %     testCase.log("Running Model_Fridge.mlx")
-        %     try 
-        %         Model_Fridge
-        %     catch ME
-        %         if string(ME.message) == "Unrecognized function or variable 'tData'."
-        %             testCase.log("Running the simulation of the Evaporator...")
-        %             out = sim(mdl);
-        %             tData = out.simlog_EvaporatorHarness.Evaporator.z_mix.series.time;
-        %         elseif string(ME.message) == "Error compiling Simscape network for model ModelFridge."
-        %             testCase.log("Expected error triggered for closed model with water as fluid.")
-        %         elseif contains(string(ME.message),"['ModelFridge/Solver Configuration']: At time 0.8")
-        %             testCase.log("Expected error triggered for closed model with R-1234yf")
-        %             warning("Did you expect R-1234yf in the Fluid Choice block for ModelFridge?")
-        %         elseif string(ME.message) == "Multiple compilation errors detected while compiling ModelFridge_WithQuality."
-        %             testCase.log("Error in ModelFridge_WithQuality.")
-        %             warning("Error in ModelFridge_WithQuality... trying again!")
-        %             simout = sim(Simulink.SimulationInput(fullmdl));
-        %         else
-        %             warning("Unexpected error")
-        %             rethrow(ME)
-        %         end
-        %     end
-        % end
+%         function runModelFridge(testCase)
+%             testCase.log("Running Model_Fridge.mlx")
+%             try
+%                 Model_Fridge
+%             catch ME
+%                 if string(ME.message) == "Unrecognized function or variable 'tData'."
+%                     testCase.log("Running the simulation of the Evaporator...")
+%                     out = sim(mdl);
+%                     tData = out.simlog_EvaporatorHarness.Evaporator.z_mix.series.time;
+%                 elseif string(ME.message) == "Error compiling Simscape network for model ModelFridge."
+%                     testCase.log("Expected error triggered for closed model with water as fluid.")
+%                 elseif string(ME.message) == string('Unrecognized field name "simlog_CompressorHarness".')
+%                     testCase.log("Expected error triggered on Compressor model.")
+%                 elseif contains(string(ME.message),"['ModelFridge/Solver Configuration']: At time 0.8")
+%                     testCase.log("Expected error triggered for closed model with R-1234yf")
+%                     warning("Did you expect R-1234yf in the Fluid Choice block for ModelFridge?")
+%                 elseif string(ME.message) == "Multiple compilation errors detected while compiling ModelFridge_WithQuality."
+%                     testCase.log("Error in ModelFridge_WithQuality.")
+%                     warning("Error in ModelFridge_WithQuality... trying again!")
+%                     simout = sim(Simulink.SimulationInput(fullmdl));
+%                 else
+%                     warning("Unexpected error")
+%                     rethrow(ME)
+%                 end
+%             end
+%         end
 
         function runBuildFridge(testCase)
             testCase.log("Running BuildRefrigerator.mlx")
