@@ -1,0 +1,449 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Thermodynamics</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-02-24"><meta name="DC.source" content="Overview.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Thermodynamics</h1><p>
+<span style="font-family:Arial">
+<span style="font-size:12pt">
+<h2> Information </h2>
+This curriculum module contains interactive
+<a href="https://www.mathworks.com/products/matlab/live-editor.html">MATLAB&reg; live scripts</a>
+that teach fundamental concepts and basic terminology related to
+ introductory thermodynamics. Topics addressed include units, the first and second laws of
+    thermodynamics, state variables, work, and the components of a refrigeration cycle.
+<br>
+<br>
+<a href=#module>Thermodynamics</a> covers a variety of standard introductory topics aimed at engineers. The
+    <a href=#script1>first law of thermodynamics</a> explores conservation laws as well as units, energy, and systems.
+    There is a short script introducing more thermodynamic terminology as well as <a href=#script2>creating pressure-volume plots</a>.
+    A longer script walks through <a href=#script3>computing the work</a> done by a single-process and by cyclic processes. The <a href=#script4>
+    second law of thermodynamics</a> addresses sources, sinks, and thermal efficiency. The <a href=#script5>state plots</a> script
+    presents various ways to plot information about the states of matter.
+    Applications include exploring a complete model of a <a href=#script7>refrigeration cycle</a>.
+<br>
+<br>
+You can use these live scripts as demonstrations in a lecture, class activities,
+or interactive assignments outside of class. The module is divided into
+five interactive instructional scripts and one project.
+<br>
+<br>
+The instructions inside the live scripts will guide you through the exercises and activities.
+Get started with each live script by running it one section at a time. To stop running the script
+or a section midway (for example, when an animation is in progress), use the Stop button in the
+RUN section of the Live Editor tab in the MATLAB Toolstrip.
+<br>
+<br>
+If you find an issue or have a suggestion, email the MathWorks online teaching team at
+    <a>onlineteaching@mathworks.com</a>.
+<br>
+<br>
+    <h2> Prerequisites </h2>
+These scripts assume background knowledge of common thermodynamic terminology as covered in secondary
+    education such as temperature, pressure, kinetic energy, and potential energy as well as fluency
+    with basic integral calculus. There is minimal MATLAB knowledge required for FirstLaw, SecondLaw
+    and StatePlots, but you could use <a href="https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted">MATLAB Onramp</a>
+    as a resource to acquire familiarity with live scripts and MATLAB syntax. More familiarity with
+    MATLAB is required for CreatePVplots, CalculateWork and Model_Fridge, as those are designed in
+    Code Visible format. Familiarity with Simulink at the level of
+    <a href="https://matlabacademy.mathworks.com/details/simulink-onramp/simulink">Simulink Onramp</a>
+    may be helpful for Model_Fridge as well.
+<br><br>
+For those interested in additional coding, the module includes instructions for installing and accessing
+    CoolProp as well as a project to build the simple refrigerator model out of standard component blocks.
+    BuildRefrigerator requires <a href="https://matlabacademy.mathworks.com/details/simulink-onramp/simulink">Simulink Onramp</a>,
+    at a minimum. If possible, <a href="https://matlabacademy.mathworks.com/details/simscape-onramp/simscape">Simscape Onramp</a>
+    would be helpful as well. Students are expected to find and insert specified blocks, connect blocks together,
+    edit block parameters, rename blocks, copy and paste subsystems, run simulations, and explore output.
+<br>
+<br>
+<h2> Getting Started </h2>
+<ol>
+    <li>
+        Make sure that you have all the required products (listed below)
+        installed. If you are missing a product, add it using the
+        <a href="https://www.mathworks.com/products/matlab/add-on-explorer.html">
+            Add-On Explorer.</a> To install an add-on, go to the <b>Home</b>
+        tab and select <img src="../Images/add-ons.png" style="margin:0px;" height=12> <b> Add-Ons > Get Add-Ons</b>.
+    </li>
+        <li>
+            Get started with each topic by clicking the link in the first column of the table below to access the
+            full script example. The instructions inside each live script will walk
+            you through the live scripts and related functions.
+        </li>
+</ol>
+    <h2> Products </h2>
+    MATLAB&reg;, Simscape&trade;, Simulink&reg;, Simulink&reg; Real-Time&trade;, Stateflow&reg;, Symbolic Math Toolbox&trade;, Image Processing Toolbox&trade;<br>
+    MATLAB and Symbolic Math Toolbox are used throughout. Simulink and Simscape are used in <code>Model_Fridge.mlx</code> and <code>BuildRefrigerator.mlx</code>. Image Processing Toolbox is used in <code>Model_Fridge.mlx</code>.
+    Tools from Simulink, Simulink Real-Time, and Stateflow are used in <code>CalculateWork.mlx</code>.
+<br>
+<br>
+<h2> <a name="module" href="matlab: edit FirstLaw.mlx CreatePVplots.mlx CalculateWork.mlx SecondLaw.mlx StatePlots.mlx BuildRefrigerator.mlx">Scripts</a> </h2>
+<table border=1 style="margin-left:20px; padding:15px;">
+    <caption><h3>Organization of the Thermodynamics Module</h3></caption>
+    <tr>
+        <th scope="col">Topic
+        </th>
+        <th scope="col">In this script, students will...
+        </th>
+    </tr>
+    <tr>
+        <th scope="row" style="text-align:center;">
+            <a name="script1"; href="matlab:edit FirstLaw.mlx;"><b>First Law of Thermodynamics</b>
+             <br>
+            <img src = "../Images/Thermos.png" height=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+            </a>
+        </th>
+        <td>
+            <ul style="margin-top:5px; margin-bottom:10px">
+                <li> Express various forms of energy in terms of fundamental units </li>
+                <li>Apply the conservation of mass in simple, conceptual situations</li>
+                <li>Identify systems with open and closed control volumes</li>
+                <li>Apply the first law of thermodynamics</li>
+            </ul>
+        </td>
+            </tr>
+                <tr>
+        <th scope="row" style="text-align:center;">
+            <a name="script2"; href="matlab:edit CreatePVplots.mlx;"><b>Pressure-Volume Diagrams</b>
+             <br>
+            <img src = "../Images/isothermalPVplot.png" width=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+            </a>
+        </th>
+        <td>
+            <ul style="margin-top:5px; margin-bottom:10px">
+                <li>Identify key words including isothermal, isobaric, and isochoric, and translate word problems into thermodynamic terminology</li>
+                <li>Identify and state necessary assumptions to express a thermodynamic relationship</li>
+            </ul>
+        </td>
+    </tr>
+                <tr>
+        <th scope="row" style="text-align:center;">
+            <a name="script3"; href="matlab:edit CalculateWork.mlx;"><b>Boundary Work</b>
+             <br>
+            <img src = "../Images/cycleWorkArea.png" width=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+            </a>
+        </th>
+        <td>
+            <ul style="margin-top:5px; margin-bottom:10px">
+                <li> Identify positive, negative, and zero work from a P-V plot without computing the value </li>
+                <li> Compute work in constant pressure, constant volume, and integrable P-V plots</li>
+                <li>Compare various state equations to each other and to tabular data</li>
+                <li>Compute the work done by a piston modeled in Simulink</li>
+            </ul>
+        </td>
+    </tr>
+                <tr>
+        <th scope="row" style="text-align:center;">
+            <a name="script4"; href="matlab:edit SecondLaw.mlx;"><b>Second Law of Thermodynamics</b>
+             <br>
+            <img src = "../Images/pistonAdiabatic.gif" width=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+            </a>
+        </th>
+        <td>
+            <ul style="margin-top:5px; margin-bottom:10px">
+                <li> Identify thermal sources, sinks, and reservoirs </li>
+                <li>Compute thermal efficiency</li>
+                <li>Reflect on the second law of thermodynamics</li>
+                <li>??? </li>
+            </ul>
+        </td>
+    </tr>
+                <tr>
+        <th scope="row" style="text-align:center;">
+            <a name="script5"; href="matlab:edit StatePlots.mlx;"><b>Properties of Pure Substances</b>
+             <br>
+            <img src = "../Images/TS_water.png" width=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+            </a>
+        </th>
+        <td>
+            <ul style="margin-top:5px; margin-bottom:10px">
+                <li> Investigate the standard shapes of state diagrams</li>
+                <li>Investigate Temperature/Entropy plots for several pure substances including water, R134a, and ammonia</li>
+                <li>Identify liquid, gas, two-phase, and supercritical states of matter on a temperature-entropy plot</li>
+            </ul>
+        </td>
+    </tr>
+                <tr>
+        <th scope="row" style="text-align:center;">
+            <a name="script7"; href="matlab:edit Model_Fridge.mlx;"><b>Explore a Refrigeration Model</b>
+             <br>
+            <img src = "../Images/FridgeModelwithSensors.png" width=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+            </a>
+        </th>
+        <td>
+            <ul style="margin-top:5px; margin-bottom:10px">
+                <li> Apply understanding about thermodynamic cycles to model a refrigerator </li>
+                <li>Perform unit conversions required to extract values from a database and use them in a model</li>
+                <li>Read and interpret thermodynamic plots</li>
+                <li>Create informative plots based on thermodynamic sensor data</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<br>
+<ul>
+<li>An additional script, <a name="extra"; hfef="matlab:edit SetUpCoolProp.mlx"><b> Set Up CoolProp </b> </a>, offers a guide to installing CoolProp in MATLAB. </li>
+This would allow additional exploration beyond the data included in this module.
+<li>There is also a more coding-intensive version of the refrigerator model that walks students through building the model entirely in Simulink in <a name="script6"; href="matlab:edit BuildRefrigerator.mlx;"><b>Build a Refrigeration Model with Simscape Fluids</b>. </li>
+</ul>
+</span>
+</span>
+</p><p>Copyright 2023 The MathWorks&#8482;, Inc.</p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Thermodynamics
+% <html>
+% <span style="font-family:Arial">
+% <span style="font-size:12pt">
+% <h2> Information </h2>
+% This curriculum module contains interactive
+% <a href="https://www.mathworks.com/products/matlab/live-editor.html">MATLAB&reg; live scripts</a>
+% that teach fundamental concepts and basic terminology related to
+%  introductory thermodynamics. Topics addressed include units, the first and second laws of 
+%     thermodynamics, state variables, work, and the components of a refrigeration cycle.
+% <br>
+% <br>
+% <a href=#module>Thermodynamics</a> covers a variety of standard introductory topics aimed at engineers. The
+%     <a href=#script1>first law of thermodynamics</a> explores conservation laws as well as units, energy, and systems. 
+%     There is a short script introducing more thermodynamic terminology as well as <a href=#script2>creating pressure-volume plots</a>. 
+%     A longer script walks through <a href=#script3>computing the work</a> done by a single-process and by cyclic processes. The <a href=#script4>
+%     second law of thermodynamics</a> addresses sources, sinks, and thermal efficiency. The <a href=#script5>state plots</a> script
+%     presents various ways to plot information about the states of matter.
+%     Applications include exploring a complete model of a <a href=#script7>refrigeration cycle</a>.
+% <br>
+% <br>
+% You can use these live scripts as demonstrations in a lecture, class activities,
+% or interactive assignments outside of class. The module is divided into
+% five interactive instructional scripts and one project.
+% <br>
+% <br>
+% The instructions inside the live scripts will guide you through the exercises and activities.
+% Get started with each live script by running it one section at a time. To stop running the script
+% or a section midway (for example, when an animation is in progress), use the Stop button in the
+% RUN section of the Live Editor tab in the MATLAB Toolstrip.
+% <br>
+% <br>
+% If you find an issue or have a suggestion, email the MathWorks online teaching team at
+%     <a>onlineteaching@mathworks.com</a>.
+% <br>
+% <br>
+%     <h2> Prerequisites </h2>
+% These scripts assume background knowledge of common thermodynamic terminology as covered in secondary 
+%     education such as temperature, pressure, kinetic energy, and potential energy as well as fluency 
+%     with basic integral calculus. There is minimal MATLAB knowledge required for FirstLaw, SecondLaw 
+%     and StatePlots, but you could use <a href="https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted">MATLAB Onramp</a> 
+%     as a resource to acquire familiarity with live scripts and MATLAB syntax. More familiarity with 
+%     MATLAB is required for CreatePVplots, CalculateWork and Model_Fridge, as those are designed in 
+%     Code Visible format. Familiarity with Simulink at the level of 
+%     <a href="https://matlabacademy.mathworks.com/details/simulink-onramp/simulink">Simulink Onramp</a> 
+%     may be helpful for Model_Fridge as well. 
+% <br><br>
+% For those interested in additional coding, the module includes instructions for installing and accessing 
+%     CoolProp as well as a project to build the simple refrigerator model out of standard component blocks. 
+%     BuildRefrigerator requires <a href="https://matlabacademy.mathworks.com/details/simulink-onramp/simulink">Simulink Onramp</a>, 
+%     at a minimum. If possible, <a href="https://matlabacademy.mathworks.com/details/simscape-onramp/simscape">Simscape Onramp</a> 
+%     would be helpful as well. Students are expected to find and insert specified blocks, connect blocks together, 
+%     edit block parameters, rename blocks, copy and paste subsystems, run simulations, and explore output.
+% <br>
+% <br>
+% <h2> Getting Started </h2>
+% <ol>
+%     <li>
+%         Make sure that you have all the required products (listed below)
+%         installed. If you are missing a product, add it using the
+%         <a href="https://www.mathworks.com/products/matlab/add-on-explorer.html">
+%             Add-On Explorer.</a> To install an add-on, go to the <b>Home</b>
+%         tab and select <img src="../Images/add-ons.png" style="margin:0px;" height=12> <b> Add-Ons > Get Add-Ons</b>.
+%     </li>
+%         <li>
+%             Get started with each topic by clicking the link in the first column of the table below to access the
+%             full script example. The instructions inside each live script will walk
+%             you through the live scripts and related functions.
+%         </li>
+% </ol>
+%     <h2> Products </h2>
+%     MATLAB&reg;, Simscape&trade;, Simulink&reg;, Simulink&reg; Real-Time&trade;, Stateflow&reg;, Symbolic Math Toolbox&trade;, Image Processing Toolbox&trade;<br>
+%     MATLAB and Symbolic Math Toolbox are used throughout. Simulink and Simscape are used in <code>Model_Fridge.mlx</code> and <code>BuildRefrigerator.mlx</code>. Image Processing Toolbox is used in <code>Model_Fridge.mlx</code>. 
+%     Tools from Simulink, Simulink Real-Time, and Stateflow are used in <code>CalculateWork.mlx</code>.
+% <br>
+% <br>
+% <h2> <a name="module" href="matlab: edit FirstLaw.mlx CreatePVplots.mlx CalculateWork.mlx SecondLaw.mlx StatePlots.mlx BuildRefrigerator.mlx">Scripts</a> </h2>
+% <table border=1 style="margin-left:20px; padding:15px;">
+%     <caption><h3>Organization of the Thermodynamics Module</h3></caption>
+%     <tr>
+%         <th scope="col">Topic
+%         </th>
+%         <th scope="col">In this script, students will...
+%         </th>
+%     </tr>
+%     <tr>
+%         <th scope="row" style="text-align:center;">
+%             <a name="script1"; href="matlab:edit FirstLaw.mlx;"><b>First Law of Thermodynamics</b> 
+%              <br>
+%             <img src = "../Images/Thermos.png" height=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+%             </a>
+%         </th>              
+%         <td>
+%             <ul style="margin-top:5px; margin-bottom:10px">
+%                 <li> Express various forms of energy in terms of fundamental units </li>
+%                 <li>Apply the conservation of mass in simple, conceptual situations</li>
+%                 <li>Identify systems with open and closed control volumes</li>
+%                 <li>Apply the first law of thermodynamics</li>
+%             </ul>
+%         </td>
+%             </tr>
+%                 <tr>
+%         <th scope="row" style="text-align:center;">
+%             <a name="script2"; href="matlab:edit CreatePVplots.mlx;"><b>Pressure-Volume Diagrams</b> 
+%              <br>
+%             <img src = "../Images/isothermalPVplot.png" width=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+%             </a>
+%         </th>              
+%         <td>
+%             <ul style="margin-top:5px; margin-bottom:10px">
+%                 <li>Identify key words including isothermal, isobaric, and isochoric, and translate word problems into thermodynamic terminology</li>
+%                 <li>Identify and state necessary assumptions to express a thermodynamic relationship</li> 
+%             </ul>
+%         </td>
+%     </tr>
+%                 <tr>
+%         <th scope="row" style="text-align:center;">
+%             <a name="script3"; href="matlab:edit CalculateWork.mlx;"><b>Boundary Work</b> 
+%              <br>
+%             <img src = "../Images/cycleWorkArea.png" width=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+%             </a>
+%         </th>              
+%         <td>
+%             <ul style="margin-top:5px; margin-bottom:10px">
+%                 <li> Identify positive, negative, and zero work from a P-V plot without computing the value </li>
+%                 <li> Compute work in constant pressure, constant volume, and integrable P-V plots</li>
+%                 <li>Compare various state equations to each other and to tabular data</li>
+%                 <li>Compute the work done by a piston modeled in Simulink</li> 
+%             </ul>
+%         </td>
+%     </tr>
+%                 <tr>
+%         <th scope="row" style="text-align:center;">
+%             <a name="script4"; href="matlab:edit SecondLaw.mlx;"><b>Second Law of Thermodynamics</b> 
+%              <br>
+%             <img src = "../Images/pistonAdiabatic.gif" width=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+%             </a>
+%         </th>              
+%         <td>
+%             <ul style="margin-top:5px; margin-bottom:10px">
+%                 <li> Identify thermal sources, sinks, and reservoirs </li>
+%                 <li>Compute thermal efficiency</li>
+%                 <li>Reflect on the second law of thermodynamics</li>
+%                 <li>??? </li>
+%             </ul>
+%         </td>
+%     </tr>
+%                 <tr>
+%         <th scope="row" style="text-align:center;">
+%             <a name="script5"; href="matlab:edit StatePlots.mlx;"><b>Properties of Pure Substances</b> 
+%              <br>
+%             <img src = "../Images/TS_water.png" width=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+%             </a>
+%         </th>              
+%         <td>
+%             <ul style="margin-top:5px; margin-bottom:10px"> 
+%                 <li> Investigate the standard shapes of state diagrams</li>
+%                 <li>Investigate Temperature/Entropy plots for several pure substances including water, R134a, and ammonia</li> 
+%                 <li>Identify liquid, gas, two-phase, and supercritical states of matter on a temperature-entropy plot</li> 
+%             </ul>
+%         </td>
+%     </tr>
+%                 <tr>
+%         <th scope="row" style="text-align:center;">
+%             <a name="script7"; href="matlab:edit Model_Fridge.mlx;"><b>Explore a Refrigeration Model</b> 
+%              <br>
+%             <img src = "../Images/FridgeModelwithSensors.png" width=150 style="margin-top:5px; margin-bottom:0px; text-align:center;">
+%             </a>
+%         </th>              
+%         <td>
+%             <ul style="margin-top:5px; margin-bottom:10px">
+%                 <li> Apply understanding about thermodynamic cycles to model a refrigerator </li>
+%                 <li>Perform unit conversions required to extract values from a database and use them in a model</li> 
+%                 <li>Read and interpret thermodynamic plots</li>
+%                 <li>Create informative plots based on thermodynamic sensor data</li>
+%             </ul>
+%         </td>
+%     </tr>
+% </table>
+% <br>
+% <ul>
+% <li>An additional script, <a name="extra"; hfef="matlab:edit SetUpCoolProp.mlx"><b> Set Up CoolProp </b> </a>, offers a guide to installing CoolProp in MATLAB. </li>
+% This would allow additional exploration beyond the data included in this module. 
+% <li>There is also a more coding-intensive version of the refrigerator model that walks students through building the model entirely in Simulink in <a name="script6"; href="matlab:edit BuildRefrigerator.mlx;"><b>Build a Refrigeration Model with Simscape Fluids</b>. </li>
+% </ul>
+% </span>
+% </span>
+% </html>                    
+% 
+% Copyright 2023 The MathWorks&trade;, Inc.
+##### SOURCE END #####
+--></body></html>
