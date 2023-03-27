@@ -79,7 +79,7 @@ This script introduces the second law of thermodynamics in both the Kelvin-Planc
 - Identify thermal sources, sinks, and reservoirs
 - Compute thermal efficiency
 - Reflect on the second law of thermodynamics
-- ??? 
+- Use the universe as a system of reference for determining thermodynamic flows
 
 ## ##
 
