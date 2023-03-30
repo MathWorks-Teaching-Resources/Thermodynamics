@@ -85,7 +85,7 @@ This script introduces the second law of thermodynamics in both the Kelvin-Planc
 
 **StatePlots.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Thermodynamics&project=Thermodynamics.prj&file=StatePlots.mlx)
 
-This script introduces computing the work done by a system using analysis of its PV plot. 
+This script introduces state diagrams and temperature-entropy plots.  
 
 <img src="https://user-images.githubusercontent.com/88841524/217914067-6d0c7ce7-87fc-4148-959c-c3259a57d49f.png" width="500"> 
 
