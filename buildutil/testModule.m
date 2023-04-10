@@ -3,8 +3,8 @@ function testModule(options)
     %   Detailed explanation goes here
     
     arguments
-        options.RunSmokeTests boolean = true;
-        options.RunFunctionTests boolean = true;
+        options.RunSmokeTests logical = true;
+        options.RunFunctionTests logical = true
         options.ModuleName (1,1) string = "";
         options.ReportSubdirectory (1,1) string = "";
     end
@@ -30,18 +30,24 @@ function testModule(options)
     
     % runner.addPlugin(XMLPlugin.producingJUnitFormat(fullfile(outputDirectory,'test-results.xml')));
     
-    smokeResults = runner.run(smokeSuite);
-    functionResults = runner.run(functionSuite);
-
-
-    if ~verLessThan('matlab','9.9') && ~isMATLABReleaseOlderThan("R2022a")
-        % This report is only available in R2022a and later.  isMATLABReleaseOlderThan wasn't added until MATLAB 2020b / version 9.9
-        smokeResults.generateHTMLReport(outputDirectory,'MainFile',"testreport.html");
+    if options.RunSmokeTests
+        smokeResults = runner.run(smokeSuite);
+        if ~verLessThan('matlab','9.9') && ~isMATLABReleaseOlderThan("R2022a")
+            % This report is only available in R2022a and later.  
+            % isMATLABReleaseOlderThan wasn't added until MATLAB 2020b / version 9.9
+            smokeResults.generateHTMLReport(outputDirectory,'MainFile',"testreport.html");
+        end
+            disp(table(smokeResults))
+    end
+    if options.RunFunctionTests
+        functionResults = runner.run(functionSuite);
+        disp(table(functionResults))
     end
     
-    disp(table(smokeResults))
-    disp(table(functionResults))
-
-    smokeResults.assertSuccess()
-    functionResults.assertSuccess()
+    if options.RunSmokeTests
+        smokeResults.assertSuccess()
+    end
+    if options.RunFunctionTests
+        functionResults.assertSuccess()
+    end
 end
