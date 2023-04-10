@@ -17,6 +17,7 @@ function testModule(options)
     
     oldpath  = addpath("tests",genpath(extractBefore(pwd,"buildutil")));
     finalize = onCleanup(@()(path(oldpath)));
+    openProject(options.ModuleName);
 
     outputDirectory = fullfile("report",options.ReportSubdirectory);
     if isempty(dir(outputDirectory))

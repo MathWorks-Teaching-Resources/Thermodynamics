@@ -38,4 +38,4 @@ jobs:
       - name: Run all tests
         uses: matlab-actions/run-command@v1
         with:
-          command: addpath("buildutil"); testModule("ReportSubdirectory","${{ matrix.MATLABVersion }}");
+          command: addpath("buildutil"); testModule("ModuleName","Thermodynamics.prj","ReportSubdirectory","${{ matrix.MATLABVersion }}");
