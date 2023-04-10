@@ -38,4 +38,4 @@ jobs:
       - name: Run all tests
         uses: matlab-actions/run-command@v1
         with:
-          command: results = runtests('IncludeSubfolders', true); disp(table(results)); assertSuccess(results);
+          command: addpath("buildutil"); testModule("ReportSubdirectory","${{ matrix.MATLABVersion }}");

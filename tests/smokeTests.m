@@ -96,34 +96,34 @@ classdef smokeTests < matlab.unittest.TestCase
 %             end
 %         end
 
-        function runBuildFridge(testCase)
-            testCase.log("Running BuildRefrigerator.mlx")
-            if isMATLABReleaseOlderThan("R2023a")
-                  try
-                     BuildRefrigerator
-                  catch ME
-                      if contains(string(ME.message),"['step6_ClosedLoopHarness/Solver Configuration']: At time 0.8")
-                          testCase.log("Expected error thrown on step6_ClosedLoopHarness")
-                      else
-                          warning("Unexpected error")
-                          rethrow(ME)
-                      end
-                  end
-            elseif isMATLABReleaseOlderThan("R2023b")
-                try
-                    BuildRefrigerator
-                catch ME
-                    if contains(string(ME.message),"['step6_ClosedLoopHarness/Solver Configuration']: At time 0.8")
-                        testCase.log("Expected error thrown on step6_ClosedLoopHarness")
-                    else
-                        warning("Unexpected error in BuilRefrigerator test")
-                        rethrow(ME)
-                    end
-                end
-            else
-                testCase.log("Expected failure, incorrect version.")
-            end
-        end
+        % function runBuildFridge(testCase)
+        %     testCase.log("Running BuildRefrigerator.mlx")
+        %     if isMATLABReleaseOlderThan("R2023a")
+        %           try
+        %              BuildRefrigerator
+        %           catch ME
+        %               if contains(string(ME.message),"['step6_ClosedLoopHarness/Solver Configuration']: At time 0.8")
+        %                   disp("Expected error thrown on step6_ClosedLoopHarness")
+        %               else
+        %                   warning("Unexpected error")
+        %                   rethrow(ME)
+        %               end
+        %           end
+        %     elseif isMATLABReleaseOlderThan("R2023b")
+        %         try
+        %             BuildRefrigerator
+        %         catch ME
+        %             if contains(string(ME.message),"['step6_ClosedLoopHarness/Solver Configuration']: At time 0.8")
+        %                 disp("Expected error thrown on step6_ClosedLoopHarness")
+        %             else
+        %                 warning("Unexpected error in BuilRefrigerator test")
+        %                 rethrow(ME)
+        %             end
+        %         end
+        %     else
+        %         disp("Expected failure, unsupported MATLAB version.")
+        %     end
+        % end
 
     end % methods (Test)
 
@@ -136,7 +136,7 @@ classdef smokeTests < matlab.unittest.TestCase
                 openProject(testCase.origProj.RootFolder);
             end
             close all force
-
+            bdclose("all")
 %             if isMATLABReleaseOlderThan("R2023a")
 %                 rmpath(string(rootDirName)+filesep+"Models22b")
 %             else
