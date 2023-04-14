@@ -1,9 +1,4 @@
-function buildModule(releaseType)
-
-    % Copyright 2022 The MathWorks, Inc.
-    arguments
-        releaseType {mustBeTextScalar,mustBeMember(releaseType,["build","major","minor","patch"])} = "build"
-    end
+function buildModule
 
     if isMATLABReleaseOlderThan("R2022a")
         error("thermodynamics:releaseFromLatest","This module only works on R2022b or later.")
@@ -17,7 +12,7 @@ function buildModule(releaseType)
     disp("code check complete.");
 
     % Run unit tests and capture code coverage
-    testToolbox()
+    testModule("ReportSubdirectory","R2023a")
     % Update Badges for GitHub.com
     badgesforModule(rootDir)
     disp("test complete");

@@ -12,7 +12,7 @@ function testModule(options)
     import matlab.unittest.TestSuite;
     import matlab.unittest.TestRunner;
     import matlab.unittest.Verbosity;
-    % import matlab.unittest.plugins.XMLPlugin;
+    import matlab.unittest.plugins.XMLPlugin;
     % import matlab.unittest.selectors.HasTag;
     
     oldpath  = addpath("tests",genpath(extractBefore(pwd,"buildutil")));
@@ -29,7 +29,7 @@ function testModule(options)
 
     runner = TestRunner.withTextOutput('OutputDetail', Verbosity.Detailed);
     
-    % runner.addPlugin(XMLPlugin.producingJUnitFormat(fullfile(outputDirectory,'test-results.xml')));
+    runner.addPlugin(XMLPlugin.producingJUnitFormat(fullfile(outputDirectory,'test-results.xml')));
     
     if options.RunSmokeTests
         smokeResults = runner.run(smokeSuite);
