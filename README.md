@@ -1,6 +1,11 @@
 # Thermodynamics 
 [![View Thermodynamics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/126784-thermodynamics) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Thermodynamics&project=Thermodynamics.prj)
 
+[![GitHub top language](https://img.shields.io/github/languages/top/MathWorks-Teaching-Resources/Thermodynamics)](https://matlab.mathworks.com/)  [![Thermodynamics Module CI/CD](https://github.com/MathWorks-Teaching-Resources/Thermodynamics/actions/workflows/ci.yml/badge.svg)](https://github.com/MathWorks-Teaching-Resources/Thermodynamics/actions/workflows/ci.yml)
+
+![MATLAB Code Issues](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FThermodynamics%2Fmain%2Freport%2Fbadge%2Fcode_issues.json) ![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FThermodynamics%2Fmain%2Freport%2Fbadge%2Ftested_with.json)
+
+
 **Curriculum Module**  
 _Created with R2022b. Compatible with R2022b and later releases._ 
 
