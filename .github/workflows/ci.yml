@@ -74,7 +74,7 @@ jobs:
           - name: Generate tested with badge
             uses: matlab-actions/run-command@v1
             with:
-              command: addpath("buildutil"),badgesforToolbox()     
+              command: addpath("buildutil"),badgesforModule()     
           
       # Publish test results from all the releases
       - name: Publish Test Results
@@ -83,7 +83,7 @@ jobs:
         with:
           junit_files: "report/*/test-results.xml"
 
-      # Commit the JSON for the MATLAB releases badge and ToolboxPackaging.prj
+      # Commit the JSON for the MATLAB releases badge 
       - name: commit changed files
         continue-on-error: true
         run: |
