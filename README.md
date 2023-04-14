@@ -3,7 +3,7 @@
 
 [![GitHub top language](https://img.shields.io/github/languages/top/MathWorks-Teaching-Resources/Thermodynamics)](https://matlab.mathworks.com/)  [![Thermodynamics Module CI/CD](https://github.com/MathWorks-Teaching-Resources/Thermodynamics/actions/workflows/ci.yml/badge.svg)](https://github.com/MathWorks-Teaching-Resources/Thermodynamics/actions/workflows/ci.yml)
 
-![MATLAB Code Issues](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FThermodynamics%2Fmain%2Freport%2Fbadge%2Fcode_issues.json) ![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FThermodynamics%2Fmain%2Freport%2Fbadge%2Ftested_with.json)
+![MATLAB Code Issues](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FThermodynamics%2Frelease%2Freport%2Fbadge%2Fcode_issues.json) ![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FThermodynamics%2Fmain%2Freport%2Fbadge%2Ftested_with.json)
 
 
 **Curriculum Module**  
