@@ -70,15 +70,3 @@ jobs:
           git commit report/badge/tested_with.json -m "Final checkins for release ${{  github.ref_name }}"
           git fetch
           git push
-
-      # Retag the repo so that the updated files are included in the release tag
-      - name: update tag
-        if: always()
-        continue-on-error: true
-        run: |
-          git config user.name "${{ github.workflow }} by ${{ github.actor }}"
-          git config user.email "<>"
-          git tag -d "${{  github.ref_name }}" 
-          git push --delete origin ${{  github.ref_name }}
-          git tag -m "Release ${{  github.ref_name }}" ${{  github.ref_name }}
-          git push --tag
