@@ -3,9 +3,10 @@ import matlab.unittest.plugins.TestReportPlugin;
 runner = matlab.unittest.TestRunner.withTextOutput;
 runner.addPlugin(TestReportPlugin.producingHTML('Verbosity',3))
 
-results = runner.run(testsuite("tests"))
+results = runner.run(testsuite("tests"));
 
-T = table(results)
+disp(table(results))
+disp("If you want to explore, the variable is called 'results'")
 
 % Alternate Option using runtests() rather than testsuite()
 % Because this one will not create the HTML output, it logs to a 

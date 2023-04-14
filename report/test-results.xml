@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" name="smokeTests" skipped="0" tests="6" time="475.0249">
+    <testcase classname="smokeTests" name="runCalculateWork" time="61.6547"/>
+    <testcase classname="smokeTests" name="runCreatePVplots" time="0.33754"/>
+    <testcase classname="smokeTests" name="runFirstLaw" time="1.402"/>
+    <testcase classname="smokeTests" name="runSecondLaw" time="83.1587"/>
+    <testcase classname="smokeTests" name="runStatePlots" time="0.79802"/>
+    <testcase classname="smokeTests" name="runBuildFridge" time="327.674"/>
+  </testsuite>
+</testsuites>
