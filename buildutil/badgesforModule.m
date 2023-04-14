@@ -32,7 +32,7 @@ function badgesforModule(rootDir)
     if releasesTestedWith ~= ""
         switch releasesFailed 
             case 0
-                badgecolor = "green";
+                badgecolor = "success";  % Also called brightgreen
             case 1
                 badgecolor = "orange";
             case 2
