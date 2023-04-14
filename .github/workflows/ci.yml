@@ -47,34 +47,12 @@ jobs:
         with:
           name: report
           path: report
-          
-      # Report on what releases tested successfully.
-      # Generate a draft release based on the tag
-      # Recreate the tag with the final version of JSON files 
-        release:
-        needs: test
-        if: always()
-        runs-on: ubuntu-latest
-    
-        steps:
-          - uses: actions/checkout@v3
-            with:
-                ref: refs/heads/main
-    
-          - name: Set up MATLAB
-            uses: matlab-actions/setup-matlab@v1
-
-          # Copy all the reports down into the container
-          - uses: actions/download-artifact@v3
-           with:
-             name: report
-             path: report
 
       # Generate the JSON for the releases tested badge
-          - name: Generate tested with badge
-            uses: matlab-actions/run-command@v1
-            with:
-              command: addpath("buildutil"),badgesforModule()     
+      - name: Generate tested with badge
+        uses: matlab-actions/run-command@v1
+        with:
+          command: addpath("buildutil"),badgesforModule()     
           
       # Publish test results from all the releases
       - name: Publish Test Results
