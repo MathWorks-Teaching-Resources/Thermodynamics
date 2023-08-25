@@ -102,6 +102,8 @@ classdef smokeTests < matlab.unittest.TestCase
                   catch ME
                       if contains(string(ME.message),"['step6_ClosedLoopHarness/Solver Configuration']: At time 0.8")
                           testCase.log("Expected error thrown on step6_ClosedLoopHarness")
+                      elseif ME.identifier == "cefclient:webwindow:MissingDisplay"
+                          disp("Expected error related to lack of display in testing machine.")
                       else
                           warning("Unexpected error")
                           rethrow(ME)
@@ -113,6 +115,8 @@ classdef smokeTests < matlab.unittest.TestCase
                 catch ME
                     if contains(string(ME.message),"['step6_ClosedLoopHarness/Solver Configuration']: At time 0.8")
                         testCase.log("Expected error thrown on step6_ClosedLoopHarness")
+                    elseif ME.identifier == "cefclient:webwindow:MissingDisplay"
+                        disp("Expected error related to lack of display in testing machine.")
                     else
                         warning("Unexpected error in BuilRefrigerator test")
                         rethrow(ME)
