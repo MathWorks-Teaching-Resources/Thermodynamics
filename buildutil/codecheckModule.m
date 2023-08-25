@@ -13,8 +13,7 @@ function codecheckModule(rootDir)
         error("thermodynamics:codeissues","No files to check.")
     end
 
-   if verLessThan('matlab','9.13')
-       % Use the old check code before R2022b
+   if isMATLABReleaseOlderThan("R2022b")
        issues = checkcode(filesToCheck);
        issues = [issues{:}];
        issueCount = size(issues,1);
@@ -38,7 +37,7 @@ function codecheckModule(rootDir)
     writeBadgeJSONFile("code issues",string(issueCount), color)
     
     if issueCount ~= 0
-        if verLessThan('matlab','9.13')
+        if isMATLABReleaseOlderThan("R2022b")
             % pre R2022b, run checkcode without a RHS argument to display issues
             checkcode(filesToCheck)
         else

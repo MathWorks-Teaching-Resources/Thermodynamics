@@ -3,7 +3,7 @@ import matlab.unittest.plugins.TestReportPlugin;
 runner = matlab.unittest.TestRunner.withTextOutput;
 runner.addPlugin(TestReportPlugin.producingHTML('Verbosity',3))
 
-results = runner.run(testsuite("tests"))
+results = runner.run(testsuite("tests")) %#ok<*NOPTS>
 
 T = table(results)
 

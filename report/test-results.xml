@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" name="smokeTests" skipped="0" tests="6" time="475.0249">
-    <testcase classname="smokeTests" name="runCalculateWork" time="61.6547"/>
-    <testcase classname="smokeTests" name="runCreatePVplots" time="0.33754"/>
-    <testcase classname="smokeTests" name="runFirstLaw" time="1.402"/>
-    <testcase classname="smokeTests" name="runSecondLaw" time="83.1587"/>
-    <testcase classname="smokeTests" name="runStatePlots" time="0.79802"/>
-    <testcase classname="smokeTests" name="runBuildFridge" time="327.674"/>
+  <testsuite errors="0" failures="0" name="functionTests" skipped="0" tests="3" time="0.039267">
+    <testcase classname="functionTests" name="checkGetBoundsSingle" time="0.02169"/>
+    <testcase classname="functionTests" name="checkGetBoundsVector" time="0.010101"/>
+    <testcase classname="functionTests" name="checkGetBoundsVectorTwoArg" time="0.0074763"/>
   </testsuite>
 </testsuites>

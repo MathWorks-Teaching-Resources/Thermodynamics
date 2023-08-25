@@ -15,7 +15,7 @@ function testModule(options)
     import matlab.unittest.plugins.XMLPlugin;
     % import matlab.unittest.selectors.HasTag;
     
-    oldpath  = addpath("tests",genpath(extractBefore(pwd,"buildutil")));
+    oldpath  = addpath("SoftwareTests",genpath(extractBefore(pwd,"buildutil")));
     finalize = onCleanup(@()(path(oldpath)));
     openProject(options.ModuleName);
 
@@ -33,7 +33,7 @@ function testModule(options)
     
     if options.RunSmokeTests
         smokeResults = runner.run(smokeSuite);
-        if ~verLessThan('matlab','9.9') && ~isMATLABReleaseOlderThan("R2022a")
+        if ~isMATLABReleaseOlderThan("R2022a")
             % This report is only available in R2022a and later.  
             % isMATLABReleaseOlderThan wasn't added until MATLAB 2020b / version 9.9
             smokeResults.generateHTMLReport(outputDirectory,'MainFile',"testreport.html");

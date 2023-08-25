@@ -157,7 +157,7 @@ classdef StartUpFcn < matlab.apps.AppBase
         end
 
         % Button pushed function: ReviewUsButton
-        function ReviewUsButtonPushed(app, event)
+        function ReviewUsButtonPushed(app)
             app.TabGroup.SelectedTab = app.TabReview;
         end
 
