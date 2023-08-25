@@ -27,16 +27,16 @@ if isMATLABReleaseOlderThan("R2023b")
     if isMATLABReleaseOlderThan("R2022b")
         disp(str + " so it may not run this example which was built in R2022b.")
     elseif isMATLABReleaseOlderThan("R2023a")
-        addpath(myPath+filesep+"Models22b")
+        addpath(fullfile(myPath,"Models22b"))
     else
         % Fix path to run R2023a files
-        addpath(myPath+filesep+"Models23a")
+        addpath(fullfile(myPath,"Models23a"))
     end
 else
     % Fix path to run R2023a files, for now?
     disp(str + " and this was designed using R2022b.")
     disp("If you find errors, please report them to onlineteaching@mathworks.com")
-    addpath(myPath+filesep+"Models23a")
+    addpath(fullfile(myPath,"Models23a"))
 end
 StartUpFcn
 end
