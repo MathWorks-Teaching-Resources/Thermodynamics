@@ -1,4 +1,4 @@
-function Startup
+function ProjectStartup
 % Open the overview file
 
 % Set up check for version number
