@@ -22,7 +22,7 @@ You can use these live scripts as demonstrations in lectures, class activities, 
 The instructions inside the live scripts will guide you through the exercises and activities. Get started with each live script by running it one section at a time. To stop running the script or a section midway (for example, when an animation is in progress), use the <img src="Images/EndIcon.png" width="19" alt="EndIcon.png"> Stop button in the **RUN** section of the **Live Editor** tab in the MATLAB Toolstrip.
 
 
-Solutions are available upon instructor request. Contact the [MathWorks online teaching team](mailto:%20onlineteaching@mathworks.com) if you would like to request solutions or have a question.
+Contact the [MathWorks Educator Content Development Team](mailto:%20onlineteaching@mathworks.com) if you have a question.
 
 ## Related Courseware Modules
 -  [**Calculus: Integrals** ](https://www.mathworks.com/matlabcentral/fileexchange/105740-calculus-integrals)is available on [<img src="Images/OpenInFX.png" width="91" alt="OpenInFX.png">](https://www.mathworks.com/matlabcentral/fileexchange/105740-calculus-integrals) or [<img src="Images/OpenInMO.png" width="136" alt="OpenInMO.png">](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Calculus-Integrals&project=Integrals.prj&file=README.mlx) or [GitHub](https://github.com/MathWorks-Teaching-Resources/Calculus-Integrals)  
